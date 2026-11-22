@@ -1,11 +1,27 @@
 <section>
   <img src="cover.jpg" alt="Flous Flow Auto Sub-Manufacturing" style="max-width: 100%; height: auto;"/>
-  <h1>Flous Flow Auto Sub-Manufacturing</h1>
-  <p>Automatically creates a linked child manufacturing order when a confirmed
-  manufacturing order contains a component with its own manufacturing BoM.</p>
+  <h1>التصنيع متعدد المستويات تلقائيًا</h1>
+  <h2>Flous Flow Auto Sub-Manufacturing</h2>
+  <p>عند تأكيد أمر تصنيع المنتج النهائي، ينشئ المديول تلقائيًا أمر تصنيع فرعي
+  لأي مكوّن له قائمة مواد تصنيع (BoM) خاصة به.</p>
+  <h2>كيف يعمل؟</h2>
+  <ol>
+    <li>أنشئ BoM للمنتج النهائي وأضف مكونات المنتج.</li>
+    <li>أنشئ BoM تصنيع عادية لأي مكوّن يتم تصنيعه داخليًا.</li>
+    <li>أكّد أمر تصنيع المنتج النهائي.</li>
+    <li>سيُنشئ Odoo أمرًا فرعيًا للمكوّن المصنع ويربطه بالأمر الرئيسي.</li>
+  </ol>
+  <h2>مثال</h2>
+  <p>لو المنتج النهائي كرسي ومكوناته مقعد وأرجل ومسامير، وكان للمقعد BoM خاصة
+  به، فسيتم إنشاء أمر تصنيع للمقعد تلقائيًا. الأرجل والمسامير بدون BoM تصنيع
+  ستظل على تدفق المخزون أو الشراء الطبيعي.</p>
+  <h2>المميزات</h2>
   <ul>
-    <li>One focused behavior at confirmation time.</li>
-    <li>Uses Odoo's native MRP procurement and traceability.</li>
-    <li>No custom menus, schedulers, configuration screens or external services.</li>
+    <li>إنشاء أوامر التصنيع الفرعية وقت تأكيد الأمر الرئيسي.</li>
+    <li>ربط حركة المنتج الفرعي بالأمر الرئيسي وتتبع كامل داخل Odoo.</li>
+    <li>منع إنشاء أمر فرعي مكرر عند إعادة المحاولة.</li>
+    <li>بدون قوائم أو أزرار أو Cron أو إعدادات إضافية.</li>
+    <li>يعتمد على محرك التصنيع الأصلي في Odoo.</li>
   </ul>
+  <p><strong>Odoo 20 Community | Dependency: Manufacturing (MRP)</strong></p>
 </section>
